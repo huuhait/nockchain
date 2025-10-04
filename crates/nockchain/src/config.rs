@@ -109,9 +109,9 @@ pub struct NockchainCli {
     pub fakenet_log_difficulty: Option<u64>,
     #[arg(long, help = "Path to fake genesis block jam file")]
     pub fakenet_genesis_jam_path: Option<PathBuf>,
-    #[arg(long, value_parser = clap::value_parser!(std::net::SocketAddr), default_value = "127.0.0.1:5555")]
+    #[arg(long, value_parser = clap::value_parser!(std::net::SocketAddr), default_value = "127.0.0.1:5554")]
     pub bind_public_grpc_addr: std::net::SocketAddr,
-    #[arg(long, default_value = "5555")]
+    #[arg(long, default_value = "5556")]
     pub bind_private_grpc_port: u16,
 }
 

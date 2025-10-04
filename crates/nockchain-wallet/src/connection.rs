@@ -15,11 +15,11 @@ pub(crate) struct ConnectionCli {
     pub client: ClientType,
 
     /// localhost port at which listener connects to private grpc server
-    #[arg(long, default_value_t = 5555)]
+    #[arg(long, default_value_t = 5556)]
     pub private_grpc_server_port: u16,
 
     /// Address of the public server (host[:port] or URI)
-    #[arg(long, value_parser = GrpcEndpoint::parse, default_value = "https://nockchain-api.zorp.io", global = true)]
+    #[arg(long, value_parser = GrpcEndpoint::parse, default_value = "http://localhost:5554", global = true)]
     pub public_grpc_server_addr: GrpcEndpoint,
 }
 
